@@ -86,7 +86,13 @@ if(isset($_POST["login"])) {
                     $_SESSION['logged_in'] = 'true';
                     $_SESSION['username'] = $result_fetch['username'];
 
-                    header("location: index.php");
+                    echo
+                    "<script>
+                         alert('Login Successful');
+                         window.location.href = 'index.php';
+                    </script>";
+
+                    // header("location: index.php");
                }
 
                else {    //if password doesnot match

@@ -46,7 +46,7 @@ session_start();
     <div class="menu">
         <h3>Hello <br> <span>User</span></h3>
         <ul>
-            <li><i class="fa-solid fa-user-pen"></i><a href="">Edit Profile</a></li>
+            <li><i class="fa-solid fa-user-pen"></i><a href="#">Edit Profile</a></li>
             <li><i class="fa-solid fa-right-from-bracket"></i><a href="logout.php">Logout</a></li>
         </ul>
     </div>
@@ -518,17 +518,6 @@ session_start();
         </div>
 
     </footer>
-
-    <?php
-        if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
-        echo
-        "<script>
-            alert('login successful');
-            // window.location.href = 'index.php';
-        </script>";
-        } 
-
-    ?> 
 
   <script src="swiper-bundle.min.js"></script>
   <script src="main.js"></script>
