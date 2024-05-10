@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 70px;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-top: 68px;
+    position: relative;
+} 
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 9%;
+    left: 0;
+    right: 0;
+    top:0;
+    /* border: 1px solid black; */
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(241, 241, 241, .7);
+    backdrop-filter: blur(5px);
+    z-index: 500;
+}
+
+header .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header i{
+    font-size: 30px;
+    padding: 5px;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 3px 20px; */
+}
+
+/* header ul li{
+    padding: 3px 20px;
+} */
+
+header ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    padding: 3px 20px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+header ul li a:hover{
+    color: gray;
+}
+
+header ul .login_btn{
+    text-decoration: none;
+    padding: 5px 20px;
+    margin: 5px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+
+header ul .login_btn:hover{
+    color: gray;
+}
+
+/* .content{
+    border: 2px solid black;
+} */
+
+.content h1{
+    /* text-align: center;
+    padding: 50px; */
+    padding: 30px 0px 15px 13.8px;
+    font-size: 54px;
+}
+
+.content img{
+    display: block;
+    margin: auto;
+    border-radius: 20px;
+    height: 550px;
+    width: 750px;
+}
+
+.content h3{
+    padding-left: 13.8px;
+    padding-bottom: 30px;
+    font-weight: 600;
+}
+
+.content h2{
+    padding: 50px 0px 15px 13.8px;
+}
+
+.content p{
+    padding: 0px 13.8px 40px 13.8px;
+    font-size: 17px;
+}
+
+.travel_bx{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 35px;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    padding-bottom: 25px;
+    margin-bottom: 150px;
+    box-shadow: 0px 20px 25px -10px rgb(165, 165, 165);
+} 
+
+.travel_bx::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(241, 241, 241, .7);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.travel_bx h4{
+    margin: 0;
+    padding: 40px 0px 20px 1.7%;
+    /* padding: 40px 13.8px 40px 13.8px; */
+}
+
+.travel_bx .cards{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    justify-content: space-evenly;
+    /* padding: 0px 30px 0px 30px; */
+}
+
+.travel_bx .cards .card{
+    width: 250px;
+    height: 250px;
+    /* border: 1px solid black; */
+}
+
+.travel_bx .cards .card h3{
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.travel_bx .cards .card h3 img{
+    width: 20px;
+    height: 15px;
+    margin-left: 5px;
+    border-radius: 3px;
+}
+
+.travel_bx .cards .card .city{
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+.travel_bx .cards .card .btn_city{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.travel_bx .cards .card .btn_city a{
+    text-decoration: none;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 11px;
+    transition: .3s linear;
+}
+
+.travel_bx .cards .card .btn_city a:hover{
+    background: gray;
+}
+
+.travel_bx .cards .card .btn_city h5{
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0;
+    margin-top: 5px;
+    line-height: 15px;
+ }
+
+.travel_bx .cards .card .btn_city h5 span{
+    font-size: 13px;
+    font-weight: 700;
+ }
