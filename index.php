@@ -83,7 +83,7 @@ session_start();
                 </div>
                 <div class="remember">
                     <label><input type="checkbox">Remember me</label>
-                    <a href="#">Forgot Password?</a>
+                    <a href="forgot-password.html" class="password_link">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btn" name="login">Login</button>
                 <div class="login_register">
@@ -92,7 +92,7 @@ session_start();
                 </div>
             </form>
         </div>
-    
+
         <div class="formbox register">
             <h2>Registration</h2>
             <form action="login_register.php" method="POST" autocomplete="off">
@@ -126,8 +126,13 @@ session_start();
                 </div>
             </form>
         </div>
+
     </div>
+ 
 </section>
+
+
+
 
 <body>
     <main>

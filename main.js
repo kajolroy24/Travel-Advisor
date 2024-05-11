@@ -18,7 +18,7 @@ const iconclose = document.querySelector(".close_icon");
 const dropdown = document.querySelector(".menu");
 
 registerlink.addEventListener("click", ()=> {
-  wrapper.classList.add("active");
+  (wrapper.classList.add("active")) 
 });
 
 loginlink.addEventListener("click", ()=> {
@@ -32,6 +32,8 @@ btnpopup.addEventListener("click", ()=> {
 iconclose.addEventListener("click", ()=> {
   wrapper.classList.remove("active-popup");
 });
+
+
 
 // setTimeout(function() {
 //   document.getElementById("error").style.display = 'none';}, 5000);
