@@ -46,7 +46,7 @@ session_start();
     <div class="menu">
         <h3>Hello <br> <span>User</span></h3>
         <ul>
-            <li><i class="fa-solid fa-user-pen"></i><a href="#">Edit Profile</a></li>
+            <li><i class="fa-solid fa-user-pen"></i><a href="editprofile.php">Edit Profile</a></li>
             <li><i class="fa-solid fa-right-from-bracket"></i><a href="logout.php">Logout</a></li>
         </ul>
     </div>
