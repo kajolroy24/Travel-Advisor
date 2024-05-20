@@ -17,19 +17,20 @@ const btnpopup = document.querySelector(".login_btn");
 const iconclose = document.querySelector(".close_icon");
 const dropdown = document.querySelector(".menu");
 
-registerlink.addEventListener("click", ()=> {
-  (wrapper.classList.add("active")) 
+
+registerlink.addEventListener("click", () => {
+   wrapper.classList.add("active");
 });
 
-loginlink.addEventListener("click", ()=> {
+loginlink.addEventListener("click", () => {
   wrapper.classList.remove("active");
 });
 
-btnpopup.addEventListener("click", ()=> {
+btnpopup.addEventListener("click", () => {
   wrapper.classList.add("active-popup");
 });
 
-iconclose.addEventListener("click", ()=> {
+iconclose.addEventListener("click", () => {
   wrapper.classList.remove("active-popup");
 });
 
@@ -46,14 +47,10 @@ iconclose.addEventListener("click", ()=> {
 // });
 
 
+
+
 function dropdown_menu() {
   dropdown.classList.toggle('active-dropdown');
 }
-
-
-
-
-
-
 
 

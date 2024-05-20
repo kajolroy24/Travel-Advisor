@@ -83,7 +83,7 @@ session_start();
                 </div>
                 <div class="remember">
                     <label><input type="checkbox">Remember me</label>
-                    <a href="forgot-password.html" class="password_link">Forgot Password?</a>
+                    <a href="forgotpassword.php" class="password_link">Forgot Password?</a>
                 </div>
                 <button type="submit" class="btn" name="login">Login</button>
                 <div class="login_register">
@@ -132,8 +132,6 @@ session_start();
 </section>
 
 
-
-
 <body>
     <main>
         <div class="content" id="home">
@@ -150,17 +148,17 @@ session_start();
             <div class="search_bx">
                     <div class="card">
                         <h4>Location <i class="fa-solid fa-location-dot"></i></h4>
-                        <input type="text" placeholder="Enter your destination">          
+                        <input type="text" name="location" placeholder="Enter your destination">          
                     </div>
                     <div class="card">
                         <h4>Date <i class="fa-solid fa-calendar-days"></i></h4>
-                        <input type="date">          
+                        <input type="date" name="date">          
                     </div>
                     <div class="card">
                         <h4>People <i class="fa-solid fa-users"></i></h4>
-                        <input type="number" placeholder="How many people?">          
+                        <input type="number" name="people" placeholder="How many people?">          
                     </div>
-                    <a href="#" class="explore_btn">Explore Now</a>
+                    <a href="#" class="explore_btn" type="button">Explore Now</a>
             </div>
             <div class="travel_bx">
                 <h4>Countries to travel</h4>
@@ -169,7 +167,7 @@ session_start();
                         <h3>India <img src="images/india_flag.png" alt=""></h3>
                         <img src="images/india.jpg" alt="" class="city">
                         <div class="btn_city">
-                            <a href="india.html">Read Now</a>
+                            <a href="india.html">Details</a>
                             <h5>Mumbai Central <br> <span>Rs. 15000</span></h5>
                         </div>
                     </div>
@@ -177,7 +175,7 @@ session_start();
                         <h3>United States <img src="images/us_flag.jpg" alt=""></h3>
                         <img src="images/newyork.jpg" alt="" class="city">
                         <div class="btn_city">
-                            <a href="us.html">Read Now</a>
+                            <a href="us.html">Details</a>
                             <h5>New York <br> <span>Rs. 35000</span></h5>
                         </div>
                     </div>
@@ -185,7 +183,7 @@ session_start();
                         <h3>Russia <img src="images/russia_flag.png" alt=""></h3>
                         <img src="images/russia.jpg" alt="" class="city">
                         <div class="btn_city">
-                            <a href="russia.html">Read Now</a>
+                            <a href="russia.html">Details</a>
                             <h5>St. Petresburg <br> <span>Rs. 25000</span></h5>
                         </div>
                     </div>
@@ -193,7 +191,7 @@ session_start();
                         <h3>Spain <img src="images/spain_flag.png" alt=""></h3>
                         <img src="images/spain.jpg" alt="" class="city">
                         <div class="btn_city">
-                            <a href="spain.html">Read Now</a>
+                            <a href="spain.html">Details</a>
                             <h5>Barcelona <br> <span>Rs. 35000</span></h5>
                         </div>
                     </div>
@@ -201,7 +199,7 @@ session_start();
                         <h3>France <img src="images/france_flag.png" alt=""></h3>
                         <img src="images/france.jpg" alt="" class="city">
                         <div class="btn_city">
-                            <a href="france.html">Read Now</a>
+                            <a href="france.html">Details</a>
                             <h5>Paris <br> <span>Rs. 45000</span></h5>
                         </div>
                     </div>
@@ -280,7 +278,7 @@ session_start();
                         <p>The relatively small island of Bora Bora is an activity giant, offering visitors the chance to experience 
                            a 4x4 safari, sunbathe and swim at white sandy beaches, dive in a natural underwater park among fish and 
                            corals, circle the turquoise lagoon by boat.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="booking.php" class="details_btn">Book Now</a>
                     </div>
                 </div>
                 <div class="places_card">
@@ -299,7 +297,7 @@ session_start();
                         <p>The shrines and temples of Kyoto offer a rare link between modern life in the city and its very ancient past.
                            The Shimogamo Shrine dates to the 6th century and seems suspended in time, its serenity and spiritual power 
                            still palpable.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
                 </div>
                 <div class="places_card">
@@ -318,7 +316,7 @@ session_start();
                         <p>Everything feels extra spectacular in Dubai—from the ultra-modern Burj Khalifa to the souks and malls filled 
                            with gold and jewellery vendors. Whether that means skiing indoors, dune-surfing in the desert, or zip-lining 
                            above the city if you can dream it you can do it.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
                 </div>
                 <div class="places_card">
@@ -337,7 +335,7 @@ session_start();
                         <p>Blossoming bougainvilleas, crumbling cathedrals on leafy boulevards and 18th-century colonial buildings 
                            colour the former French colony of Pondy, which sits on the Bay of Bengal. But it's also unmistakably Indian,
                            with colourful festivals throughout the year.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
                 </div>
                 <div class="places_card">
@@ -356,7 +354,7 @@ session_start();
                         <p>A bright, modern city embedded in nature, where gallery-hopping, surfing, and fine-dining can all take place 
                            in a single day Sydney offers an urban mix of rich history and contemporary buzz, but with a distinctly 
                            Australian spirit. The Opera House is in the city's harbour.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
 
                 </div>
@@ -376,7 +374,7 @@ session_start();
                         <p>Bali packs a lot into one small island— from breathtaking waterfalls like Sekumpul in the north to the white 
                            sand beaches of Nyang Nyang in the south. Whatever you're seeking, you'll probably find from surf-able waves
                            in Batu Bolong to luxury clifftop hotels in Nusa Dua.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
 
                 </div>
@@ -396,7 +394,7 @@ session_start();
                         <p>A sunny escape, a wonder of ancient ruins, and a dynamic country stirring with life—Turkey is a multilayered 
                            delight. Blessed by a Mediterranean climate and a rich history influence by the Ottoman Empire, Turkey appeals 
                            to both culture-seekers and beach-buffs.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
 
                 </div>
@@ -416,7 +414,7 @@ session_start();
                         <p>Mauritius is arguably Africa's wealthiest destination, a tropical paradise with tons to do. Port Louis, the 
                            modern capital of this 38-mile by 29-mile island, is a bustling port with a revitalized waterfront and a 
                            busy market. Rivière Noire is ideal for great deep-sea fishing.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
 
                 </div>
@@ -436,7 +434,7 @@ session_start();
                         <p>This tiny island city-state is a study of fusions and contrasts bursting with wonders waiting to be explored. 
                            Tranquil parks abut futuristic skyscrapers and luxe shopping centres. Your first trip to Singapore will 
                            prove that sometimes the best things come in small packages.</p>
-                        <a href="#" class="details_btn">Details</a>
+                        <a href="#" class="details_btn">Book Now</a>
                     </div>
 
                 </div>
