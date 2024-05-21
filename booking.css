@@ -46,11 +46,10 @@ input,
 input[type="email"],
 input[type="number"],
 input[type="date"],
-input[type="tel"],*/
+input[type="tel"], */
 textarea,
 button,
-select{
-    /* padding: 12px; */
+select {
     font-size: 14px;
     border: 1px solid #c6c6c6;
     width: 100%;
@@ -68,37 +67,32 @@ select{
     }
 }
 
-.input_box :hover{
+label :hover{
     color: #bdcc00;
     cursor: text;
 }
 
 label{
     position: absolute;
-    /* left: 8px;
-    top: 5px; */
-    top: 50%;
+    top: 22px;
     left: 10px;
-    width: 60%;
     color: #999;
     font-size: 14px;
     display: inline-block;
-    /* padding: 4px 10px; */
-    padding: 0 5px;
+    padding: 4px 10px;
     font-weight: 400;
     background-color: rgba(255,255,255,0);
     transform: translateY(-50%);
     transition: 0.2s;
     pointer-events: none;
-    /* transition: color .3s, top .3s, background-color .8s; */
-    /* background-color: rgba(255,255,255,1); */
 }
 
-.form-group input:focus~label,
-.form-group input:valid~label {
+.form-group input:focus ~ label,
+/* .form-group select:focus ~ label,
+.form-group textarea:focus ~ label, */
+.form-group:not(:placeholder-shown).form-group:not(:focus) ~ label {
     top: 0;
     background-color: rgba(255,255,255,1);
-    /* font-size: 12px; */
 }
 
 /* label.active{
@@ -150,10 +144,6 @@ label{
     width: 395px;
     appearance: none;
     cursor: pointer;
-}
-
-select option[value] {
-    display: none;
 }
 
 textarea {

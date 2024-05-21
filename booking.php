@@ -60,7 +60,7 @@
                         <select class="floatLabel" id="select">
                             <option value="blank"></option>
                             <option value="1">1</option>
-                            <option value="2" selected>2</option>
+                            <option value="2">2</option>
                             <option value="3">3</option>
                         </select>
                         <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
@@ -98,7 +98,6 @@
         </div> <!-- /.form-group -->
     </form>
 
-    <script src="booking.js"></script>
 
 </body>
 
