@@ -15,29 +15,29 @@
         <div class="form-group">
             <h2 class="heading">Booking & contact</h2>
             <div class="input_box">
-                <input type="text" id="name" class="floatLabel" name="name">
+                <input type="text" id="name" class="floatLabel" name="name" required>
                 <label for="name">Name</label>
             </div>
             <div class="input_box">
-                <input type="text" id="email" class="floatLabel" name="email">
+                <input type="text" id="email" class="floatLabel" name="email" required>
                 <label for="email">Email</label>
             </div>
             <div class="input_box">
-                <input type="tel" id="phone" class="floatLabel" name="phone">
+                <input type="tel" id="phone" class="floatLabel" name="phone" required>
                 <label for="phone">Phone</label>
             </div>
             <div class="grid">
                 <div class="input_box">
-                    <input type="text" id="city" class="floatLabel" name="city">
+                    <input type="text" id="city" class="floatLabel" name="city" required>
                     <label for="city">City</label>
                 </div>
                 <div class="input_box">
-                    <input type="text" id="post-code" class="floatLabel" name="post-code">
+                    <input type="text" id="post-code" class="floatLabel" name="post-code" required>
                     <label for="post-code">Post Code</label>
                 </div>
             </div>
             <div class="input_box">
-                <input type="text" id="country" class="floatLabel" name="country">
+                <input type="text" id="country" class="floatLabel" name="country" required>
                 <label for="country">Country</label>
             </div>
         </div>
@@ -46,28 +46,28 @@
             <h2 class="heading">Details</h2>
             <div class="grid-date">
                     <div class="input_box">
-                        <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+                        <input type="date" id="arrive" class="floatLabel" name="arrive" placeholder="" required>
                         <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
                     </div>
                     <div class="input_box">
-                        <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+                        <input type="date" id="depart" class="floatLabel" name="depart" placeholder="" required/>
                         <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
                     </div>
             </div>
             <div class="grid">
                     <div class="input_box">
                         <i class="fa fa-sort"></i>
-                        <select class="floatLabel" id="select">
+                        <select class="floatLabel" id="select" required>
                             <option value="blank"></option>
                             <option value="1">1</option>
-                            <option value="2">2</option>
+                            <option value="2" selected>2</option>
                             <option value="3">3</option>
                         </select>
                         <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
                     </div>
                     <div class="input_box">
                         <i class="fa fa-sort"></i>
-                        <select class="floatLabel" id="select">
+                        <select class="floatLabel" id="select" required>
                             <option value="blank"></option>
                             <option value="deluxe" selected>With Bathroom</option>
                             <option value="Zuri-zimmer">Without Bathroom</option>
@@ -77,7 +77,7 @@
 
                     <div class="input_box">
                         <i class="fa fa-sort"></i>
-                        <select class="floatLabel" id="select">
+                        <select class="floatLabel" id="select" required>
                             <option value="blank"></option>
                             <option value="single-bed">Single Bed</option>
                             <option value="double-bed" selected>Double Bed</option>
@@ -98,6 +98,7 @@
         </div> <!-- /.form-group -->
     </form>
 
+    <script src="booking.js"></script>
 
 </body>
 
