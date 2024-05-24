@@ -50,7 +50,6 @@ input[type="tel"], */
 textarea,
 button,
 select {
-    /* top: 50%; */
     font-size: 14px;
     border: 1px solid #c6c6c6;
     width: 100%;
@@ -61,8 +60,6 @@ select {
     font-weight: 300;
     border-radius: 2px;
     transition: all .3s;
-    /* pointer-events: none; */
-
 
     &:focus, &:hover{
         outline: none;
@@ -70,7 +67,7 @@ select {
     }
 }
 
-label :hover{
+label:hover{
     color: #bdcc00;
     cursor: text;
 }
@@ -87,7 +84,7 @@ label{
     background-color: rgba(255,255,255,0);
     transform: translateY(-50%);
     transition: 0.2s;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 
 .form-group input[type="date"] {
@@ -99,28 +96,16 @@ label{
     color: #999;
 }
 
-.form-group select option ,
-.form-group select option{
-    color: #999;
-}
-
 .form-group input:focus ~ label,
 .form-group input:valid ~ label,
-.form-group select:focus ~ label
-/* .form-group select:valid ~ label */
-/* .form-group textarea:focus ~ label,
-.form-group textarea:valid ~ label  */
+.form-group select:focus ~ label,
+.form-group select:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown).form-group textarea:not(:focus) ~ label
 { 
     top: 0;
     background-color: rgba(255,255,255,1);
 }
-
-/* label.active{
-    top: -11px;
-    color: #555;
-    background-color: rgba(255,255,255,1);
-    width: auto;
-} */
 
 /* icons */
 .fa-sort{ 
@@ -164,12 +149,12 @@ label{
     width: 395px;
     appearance: none;
     cursor: pointer;
-    color: transparent;
 }
 
 textarea {
     resize: none;
     height: 200px;
+    padding: 15px;
 }
 
 .submit_btn {

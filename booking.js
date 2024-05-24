@@ -1,6 +1,7 @@
-const form = document.getElementsByClassName(".form-group .grid .floatLabel");
-const select = form.getElementsById("select");
+// const form = document.getElementsByClassName(".form-group .grid .floatLabel");
+// const select = form.getElementsByClassName("select");
 
-select.addEventListener("click", () => {
-  select.value = "";
-});
+// select.addEventListner("click", () => {
+//   select.options.value="";
+// });
+

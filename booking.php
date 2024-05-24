@@ -45,45 +45,45 @@
         <div class="form-group">
             <h2 class="heading">Details</h2>
             <div class="grid-date">
-                    <div class="input_box">
-                        <input type="date" id="arrive" class="floatLabel" name="arrive" placeholder="" required>
-                        <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
-                    </div>
-                    <div class="input_box">
-                        <input type="date" id="depart" class="floatLabel" name="depart" placeholder="" required/>
-                        <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
-                    </div>
+                <div class="input_box">
+                    <input type="date" id="arrive" class="floatLabel" name="arrive" required>
+                    <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+                </div>
+                <div class="input_box">
+                    <input type="date" id="depart" class="floatLabel" name="depart" required />
+                    <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+                </div>
             </div>
             <div class="grid">
-                    <div class="input_box">
-                        <i class="fa fa-sort"></i>
-                        <select class="floatLabel" id="select" required>
-                            <option value="blank"></option>
-                            <option value="1">1</option>
-                            <option value="2" selected>2</option>
-                            <option value="3">3</option>
-                        </select>
-                        <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
-                    </div>
-                    <div class="input_box">
-                        <i class="fa fa-sort"></i>
-                        <select class="floatLabel" id="select" required>
-                            <option value="blank"></option>
-                            <option value="deluxe" selected>With Bathroom</option>
-                            <option value="Zuri-zimmer">Without Bathroom</option>
-                        </select>
-                        <label for="fruit">Room</label>
-                    </div>
+                <div class="input_box">
+                    <i class="fa fa-sort"></i>
+                    <select class="floatLabel" id="select">
+                        <option value="blank" disabled></option>
+                        <option value="1">1</option>
+                        <option value="2" selected>2</option>
+                        <option value="3">3</option>
+                    </select>
+                    <label for="fruit"><i class="fa fa-male"></i>&nbsp;&nbsp;People</label>
+                </div>
+                <div class="input_box">
+                    <i class="fa fa-sort"></i>
+                    <select class="floatLabel" id="select">
+                        <option value="blank" disabled></option>
+                        <option value="deluxe" selected>With Bathroom</option>
+                        <option value="Zuri-zimmer">Without Bathroom</option>
+                    </select>
+                    <label for="fruit">Room</label>
+                </div>
 
-                    <div class="input_box">
-                        <i class="fa fa-sort"></i>
-                        <select class="floatLabel" id="select" required>
-                            <option value="blank"></option>
-                            <option value="single-bed">Single Bed</option>
-                            <option value="double-bed" selected>Double Bed</option>
-                        </select>
-                        <label for="fruit">Bedding</label>
-                    </div>
+                <div class="input_box">
+                    <i class="fa fa-sort"></i>
+                    <select class="floatLabel" id="select">
+                        <option value="blank" disabled></option>
+                        <option value="single-bed">Single Bed</option>
+                        <option value="double-bed" selected>Double Bed</option>
+                    </select>
+                    <label for="fruit">Bedding</label>
+                </div>
             </div>
 
             <div class="info-box">
@@ -98,7 +98,13 @@
         </div> <!-- /.form-group -->
     </form>
 
-    <script src="booking.js"></script>
+    <!-- <script>
+        function showDropInfo() {
+            const selectedElement = document.getElementById("select");
+            selectedElement.selectedIndex;
+        }
+    </script> -->
+
 
 </body>
 
