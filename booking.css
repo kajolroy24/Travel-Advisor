@@ -9,11 +9,15 @@
 body{
     font-family: 'Poppins', sans-serif;
 	text-align: center;
+    /* margin-left: 10px;
+    margin-right: 10px; */
 }
 
 .info-text{
     text-align: left;
     width: 100%;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
 
 form{
@@ -33,7 +37,7 @@ h2.heading{
 	color: #506982;
 	border-bottom: 1px solid #506982;
 	padding-bottom: 3px;
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
 
 .input_box{
@@ -55,21 +59,16 @@ select {
     width: 100%;
     height: 40px;
     padding: 0 15px;
-    margin-bottom: 18px;
-    color: #888;
+    margin-bottom: 20px;
+    color: #1b3d4d;
     font-weight: 300;
     border-radius: 2px;
     transition: all .3s;
 
     &:focus, &:hover{
         outline: none;
-        border-color: #9FB1C1;
+        border-color:  #98a9b8;
     }
-}
-
-label:hover{
-    color: #bdcc00;
-    cursor: text;
 }
 
 label{
@@ -81,10 +80,15 @@ label{
     display: inline-block;
     padding: 4px 10px;
     font-weight: 400;
-    background-color: rgba(255,255,255,0);
+    /* background-color: rgba(255,255,255,0); */
     transform: translateY(-50%);
-    transition: 0.2s;
+    transition: 0.2s ease;
     pointer-events: none;
+}
+
+label:hover{
+    color: #bdcc00;
+    cursor: text;
 }
 
 .form-group input[type="date"] {
@@ -93,7 +97,7 @@ label{
 
 .form-group input[type="date"]:focus ,
 .form-group input[type="date"]:valid  {
-    color: #999;
+    color: #1b3d4d;
 }
 
 .form-group input:focus ~ label,
@@ -105,14 +109,16 @@ label{
 { 
     top: 0;
     background-color: rgba(255,255,255,1);
+    color: #1b3d4d;
 }
 
 /* icons */
-.fa-sort{ 
+#down-arrow{ 
     position:absolute;
     right: 10px;
     top: 17px;
     color: #999;
+    font-size: 12px;
 }
 
 .grid {
@@ -133,6 +139,7 @@ label{
 .grid-date {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 5px;
     width: 100%;
 }
 
