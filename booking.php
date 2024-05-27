@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form name="booking" action="">
+    <form name="booking" method="POST" autocomplete="off">
         <!--  General -->
         <div class="form-group">
             <h2 class="heading">Booking & contact</h2>
@@ -19,7 +19,7 @@
                 <label for="name">Name</label>
             </div>
             <div class="input_box">
-                <input type="text" id="email" class="floatLabel" name="email" required>
+                <input type="email" id="email" class="floatLabel" name="email" required>
                 <label for="email">Email</label>
             </div>
             <div class="input_box">
@@ -32,7 +32,7 @@
                     <label for="city">City</label>
                 </div>
                 <div class="input_box">
-                    <input type="text" id="post-code" class="floatLabel" name="post-code" required>
+                    <input type="text" id="post-code" class="floatLabel" name="postcode" required>
                     <label for="post-code">Post Code</label>
                 </div>
             </div>
@@ -57,32 +57,32 @@
             <div class="grid">
                 <div class="input_box">
                     <i class="fa-solid fa-angle-down" id="down-arrow"></i>
-                    <select class="floatLabel" id="select">
+                    <select class="floatLabel" id="select" name="people">
                         <option value="blank" disabled></option>
                         <option value="1">1</option>
                         <option value="2" selected>2</option>
                         <option value="3">3</option>
                     </select>
-                    <label for="people"><i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;People</label>
+                    <label for="people"><i class="fa-solid fa-user-group" id="select-icon"></i>&nbsp;&nbsp;People</label>
                 </div>
                 <div class="input_box">
                     <i class="fa-solid fa-angle-down" id="down-arrow"></i>
-                    <select class="floatLabel" id="select">
+                    <select class="floatLabel" id="select" name="food">
                         <option value="blank" disabled></option>
-                        <option value="deluxe" selected>With Breakfast</option>
-                        <option value="Zuri-zimmer">Without Breakfast</option>
+                        <option value="With Breakfast" selected>With Breakfast</option>
+                        <option value="Without Breakfast">Without Breakfast</option>
                     </select>
-                    <label for="food"><i class="fa-solid fa-utensils"></i>&nbsp;&nbsp;Breakfast</label>
+                    <label for="food"><i class="fa-solid fa-utensils" id="select-icon"></i>&nbsp;&nbsp;Breakfast</label>
                 </div>
 
                 <div class="input_box">
                     <i class="fa-solid fa-angle-down" id="down-arrow"></i>
-                    <select class="floatLabel" id="select">
+                    <select class="floatLabel" id="select" name="bed">
                         <option value="blank" disabled></option>
-                        <option value="single-bed">Single Bed</option>
-                        <option value="double-bed" selected>Double Bed</option>
+                        <option value="Single Bed">Single Bed</option>
+                        <option value="Double Bed" selected>Double Bed</option>
                     </select>
-                    <label for="bed"><i class="fa-solid fa-bed"></i>&nbsp;&nbsp;Bedding</label>
+                    <label for="bed"><i class="fa-solid fa-bed" id="select-icon"></i>&nbsp;&nbsp;Bedding</label>
                 </div>
             </div>
 
@@ -92,7 +92,7 @@
                     <textarea name="comments" class="floatLabel" id="comments"></textarea>
                     <label for="comments">Comments</label>
                 </div>
-                <button type="submit" value="Submit" class="submit_btn">Submit</button>
+                <button type="submit" value="Submit" class="submit_btn" name="submit">Submit</button>
             </div>
         </div> <!-- /.form-group -->
     </form>
@@ -100,3 +100,51 @@
 </body>
 
 </html>
+
+<?php
+
+require 'connection.php';
+
+if(isset($_POST["submit"])) {
+
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $phone = $_POST["phone"];
+    $city = $_POST["city"];
+    $postcode = $_POST["postcode"];
+    $country = $_POST["country"];
+    $arrive = $_POST["arrive"];
+    $depart = $_POST["depart"];
+    $people = $_POST["people"];
+    $food = $_POST["food"];
+    $bed = $_POST["bed"];
+    $comments = $_POST["comments"];
+
+    $query =  "INSERT INTO `booking_table`(`name`, `email`, `phone`, `city`, `postcode`, `country`, `arrive`, `depart`, `people`, 
+              `breakfast`, `bedding`, `comments`) VALUES ('$name','$email','$phone','$city','$postcode','$country','$arrive','$depart',
+               '$people','$food','$bed','$comments')";   
+    $result = mysqli_query($conn, $query); 
+
+    if ($result) {
+        echo
+        "<script>
+                alert('Booking Successful');
+                window.location.href = 'index.php';
+        </script>";
+
+    }
+
+    else
+    {
+        echo
+        "<script>
+            alert('Server Down! Try again later');
+            window.location.href = 'index.php';
+        </script>";
+
+    }
+
+
+}
+
+?>

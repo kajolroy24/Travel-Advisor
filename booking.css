@@ -121,6 +121,10 @@ label:hover{
     font-size: 12px;
 }
 
+#select-icon {
+    font-size: 13px;
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;

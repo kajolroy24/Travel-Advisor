@@ -53,18 +53,6 @@ session_start();
 
 </header>
 
-
-<!-- <?php
-    if(isset($_GET['error'])) { ?>
-        <p id="error" class="error"><?php echo $_GET['error']; ?></p>
-<?php } ?>
-
-<?php
-    if(isset($_GET['success'])) { ?>
-        <p id="success" class="success"><?php echo $_GET['success']; ?></p>
-<?php } ?> -->
-
-
 <section class="login_box">
     <div class="wrapper">
         <span class="close_icon"><i class="fa-solid fa-x"></i></span>
@@ -278,7 +266,7 @@ session_start();
                         <p>The relatively small island of Bora Bora is an activity giant, offering visitors the chance to experience 
                            a 4x4 safari, sunbathe and swim at white sandy beaches, dive in a natural underwater park among fish and 
                            corals, circle the turquoise lagoon by boat.</p>
-                        <a href="booking.php" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>                                       
                     </div>
                 </div>
                 <div class="places_card">
@@ -297,7 +285,7 @@ session_start();
                         <p>The shrines and temples of Kyoto offer a rare link between modern life in the city and its very ancient past.
                            The Shimogamo Shrine dates to the 6th century and seems suspended in time, its serenity and spiritual power 
                            still palpable.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>   
                     </div>
                 </div>
                 <div class="places_card">
@@ -316,7 +304,7 @@ session_start();
                         <p>Everything feels extra spectacular in Dubai—from the ultra-modern Burj Khalifa to the souks and malls filled 
                            with gold and jewellery vendors. Whether that means skiing indoors, dune-surfing in the desert, or zip-lining 
                            above the city if you can dream it you can do it.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>
                     </div>
                 </div>
                 <div class="places_card">
@@ -335,7 +323,7 @@ session_start();
                         <p>Blossoming bougainvilleas, crumbling cathedrals on leafy boulevards and 18th-century colonial buildings 
                            colour the former French colony of Pondy, which sits on the Bay of Bengal. But it's also unmistakably Indian,
                            with colourful festivals throughout the year.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>
                     </div>
                 </div>
                 <div class="places_card">
@@ -354,9 +342,8 @@ session_start();
                         <p>A bright, modern city embedded in nature, where gallery-hopping, surfing, and fine-dining can all take place 
                            in a single day Sydney offers an urban mix of rich history and contemporary buzz, but with a distinctly 
                            Australian spirit. The Opera House is in the city's harbour.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                           <?php bookingBtn() ?>
                     </div>
-
                 </div>
                 <div class="places_card">
                     <div class="places_img">
@@ -374,7 +361,7 @@ session_start();
                         <p>Bali packs a lot into one small island— from breathtaking waterfalls like Sekumpul in the north to the white 
                            sand beaches of Nyang Nyang in the south. Whatever you're seeking, you'll probably find from surf-able waves
                            in Batu Bolong to luxury clifftop hotels in Nusa Dua.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                           <?php bookingBtn() ?>
                     </div>
 
                 </div>
@@ -394,7 +381,7 @@ session_start();
                         <p>A sunny escape, a wonder of ancient ruins, and a dynamic country stirring with life—Turkey is a multilayered 
                            delight. Blessed by a Mediterranean climate and a rich history influence by the Ottoman Empire, Turkey appeals 
                            to both culture-seekers and beach-buffs.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>                       
                     </div>
 
                 </div>
@@ -414,7 +401,7 @@ session_start();
                         <p>Mauritius is arguably Africa's wealthiest destination, a tropical paradise with tons to do. Port Louis, the 
                            modern capital of this 38-mile by 29-mile island, is a bustling port with a revitalized waterfront and a 
                            busy market. Rivière Noire is ideal for great deep-sea fishing.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>
                     </div>
 
                 </div>
@@ -434,10 +421,30 @@ session_start();
                         <p>This tiny island city-state is a study of fusions and contrasts bursting with wonders waiting to be explored. 
                            Tranquil parks abut futuristic skyscrapers and luxe shopping centres. Your first trip to Singapore will 
                            prove that sometimes the best things come in small packages.</p>
-                        <a href="#" class="details_btn">Book Now</a>
+                        <?php bookingBtn() ?>                       
                     </div>
-
                 </div>
+
+                <?php
+                    function bookingBtn() {
+                    if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) { 
+                        echo
+                        "<a href='booking.php' class='details_btn'>Book Now</a>";
+
+                    }
+                    else  {
+                        echo
+                        "<a href='#' class='details_btn' onclick='showAlert();'>Book Now</a>
+                        <script>
+                            function showAlert() {
+                            alert('Login in to Book Hotels!');
+                            window.location.href = 'index.php';
+                            }
+                        </script>";
+                    }  
+                }
+                ?> 
+
             </div>
         </div>
     </main>
