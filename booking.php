@@ -19,7 +19,7 @@
                 <label for="name">Name</label>
             </div>
             <div class="input_box">
-                <input type="email" id="email" class="floatLabel" name="email" required>
+                <input type="email" id="email" class="floatLabel" name="email" placeholder=" " required>
                 <label for="email">Email</label>
             </div>
             <div class="input_box">
@@ -32,7 +32,7 @@
                     <label for="city">City</label>
                 </div>
                 <div class="input_box">
-                    <input type="text" id="post-code" class="floatLabel" name="postcode" required>
+                    <input type="tel" id="post-code" class="floatLabel" name="postcode" required>
                     <label for="post-code">Post Code</label>
                 </div>
             </div>
@@ -89,13 +89,17 @@
             <div class="info-box">
                 <p class="info-text">Please describe your needs e.g. Extra beds, children's cots</p>
                 <div class="input_box">
-                    <textarea name="comments" class="floatLabel" id="comments"></textarea>
+                    <textarea type="text" name="comments" class="floatLabel" id="comments" placeholder=""></textarea>
                     <label for="comments">Comments</label>
                 </div>
-                <button type="submit" value="Submit" class="submit_btn" name="submit">Submit</button>
+                <button type="submit" value="Submit" class="submit_btn" name="submit" onsubmit="fetchdata(event)">Submit</button>
             </div>
         </div> <!-- /.form-group -->
     </form>
+
+    <script src="main.js">
+
+    </script>
 
 </body>
 
@@ -128,8 +132,8 @@ if(isset($_POST["submit"])) {
     if ($result) {
         echo
         "<script>
-                alert('Booking Successful');
-                window.location.href = 'index.php';
+                alert('Booking Successful!');
+                window.location.href = 'booking-details.php';
         </script>";
 
     }
@@ -143,8 +147,6 @@ if(isset($_POST["submit"])) {
         </script>";
 
     }
-
-
 }
 
 ?>

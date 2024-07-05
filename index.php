@@ -42,7 +42,6 @@ session_start();
         ?>
     </ul>
     
-
     <div class="menu">
         <h3>Hello <br> <span>User</span></h3>
         <ul>
@@ -129,7 +128,7 @@ session_start();
             <div class="content_bx">
                 <h1>The right destination for you and your family</h1>
                 <p>Experience the world's most beautiful destinations with us. Book your dream vacation today!</p>
-                <a href="#" class="search_btn">Start your search</a>
+                <a href="#places" class="search_btn">Start your search</a>
             </div>
         </div>
         <div class="trip_bx">
@@ -146,7 +145,7 @@ session_start();
                         <h4>People <i class="fa-solid fa-users"></i></h4>
                         <input type="number" name="people" placeholder="How many people?">          
                     </div>
-                    <a href="#" class="explore_btn" type="button">Explore Now</a>
+                    <a href="#places" class="explore_btn" type="button">Explore Now</a>
             </div>
             <div class="travel_bx">
                 <h4>Countries to travel</h4>
@@ -521,9 +520,6 @@ session_start();
                         </ul>
                     </div>
                 </div>
-
-
-
             </div>
         </div>
 

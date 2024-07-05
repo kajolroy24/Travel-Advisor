@@ -10,6 +10,7 @@ var swiper = new Swiper(".discover_container", {
   },
 });
 
+// LOGIN-REGISTRATION SELECTORS
 const wrapper = document.querySelector(".wrapper");
 const loginlink = document.querySelector(".login_link");
 const registerlink = document.querySelector(".register_link");
@@ -17,7 +18,14 @@ const btnpopup = document.querySelector(".login_btn");
 const iconclose = document.querySelector(".close_icon");
 const dropdown = document.querySelector(".menu");
 
+// BOOKING FORM SELECTORS
+function fetchdata(event) {
+  const value=document.getElementById('#arrive').value;
+  console.log(value);
+  event.preventDefault();
+}
 
+// LOGIN-REGISTRATION POPUP
 registerlink.addEventListener("click", () => {
    wrapper.classList.add("active");
 });
@@ -34,21 +42,7 @@ iconclose.addEventListener("click", () => {
   wrapper.classList.remove("active-popup");
 });
 
-
-
-// setTimeout(function() {
-//   document.getElementById("error").style.display = 'none';}, 5000);
-
-// setTimeout(function() {
-//   document.getElementById("success").style.display = 'none';}, 5000);
-
-// login_user.addEventListener("click", () => {
-//   dropdown.classList.toggle("active-dropdown");
-// });
-
-
-
-
+// LOGOUT DROPDOWN
 function dropdown_menu() {
   dropdown.classList.toggle('active-dropdown');
 }
