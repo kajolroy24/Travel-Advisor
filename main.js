@@ -18,13 +18,6 @@ const btnpopup = document.querySelector(".login_btn");
 const iconclose = document.querySelector(".close_icon");
 const dropdown = document.querySelector(".menu");
 
-// BOOKING FORM SELECTORS
-function fetchdata(event) {
-  const value=document.getElementById('#arrive').value;
-  console.log(value);
-  event.preventDefault();
-}
-
 // LOGIN-REGISTRATION POPUP
 registerlink.addEventListener("click", () => {
    wrapper.classList.add("active");

@@ -92,14 +92,14 @@
                     <textarea type="text" name="comments" class="floatLabel" id="comments" placeholder=""></textarea>
                     <label for="comments">Comments</label>
                 </div>
-                <button type="submit" value="Submit" class="submit_btn" name="submit" onsubmit="fetchdata(event)">Submit</button>
+                <button type="submit" value="Submit" class="submit_btn" name="submit">Submit</button>
             </div>
         </div> <!-- /.form-group -->
     </form>
 
-    <script src="main.js">
-
-    </script>
+    <!-- <script type="module" src="booking.js">
+        
+    </script> -->
 
 </body>
 
@@ -124,18 +124,20 @@ if(isset($_POST["submit"])) {
     $bed = $_POST["bed"];
     $comments = $_POST["comments"];
 
+    // $getid = "SELECT 'id' FROM booking_table WHERE email='$email' OR username='$name'";
+
     $query =  "INSERT INTO `booking_table`(`name`, `email`, `phone`, `city`, `postcode`, `country`, `arrive`, `depart`, `people`, 
               `breakfast`, `bedding`, `comments`) VALUES ('$name','$email','$phone','$city','$postcode','$country','$arrive','$depart',
                '$people','$food','$bed','$comments')";   
     $result = mysqli_query($conn, $query); 
 
     if ($result) {
+        sendMail($email, $arrive, $depart, $people); 
         echo
         "<script>
-                alert('Booking Successful!');
-                window.location.href = 'booking-details.php';
-        </script>";
-
+                alert('Booking Successful! A confirmation email has been sent to your email.');
+                window.location.href = 'index.php';
+        </script>"; 
     }
 
     else
@@ -149,4 +151,48 @@ if(isset($_POST["submit"])) {
     }
 }
 
-?>
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    function sendMail($email, $arrive, $depart, $people)
+    {
+        require('PHPMailer/PHPMailer.php');
+        require('PHPMailer/SMTP.php');
+        require('PHPMailer/Exception.php');
+
+        $mail = new PHPMailer(true);
+
+        try {
+            //Server settings
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = 'kr8235126@gmail.com';                     //SMTP username
+            $mail->Password   = 'kprw zfoz wrba mnvl';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        
+            //Recipients
+            $mail->setFrom('kr8235126@gmail.com', 'Travel Advisor');
+            $mail->addAddress($email);     //Add a recipient
+        
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Booking Confirmed! Thank you.';
+            $mail->Body    = "We are pleased to inform you that your request has been received and confirmed.<br>
+                              Here are your booking details: <br>
+                              Check In: $arrive <br>
+                              Check Out: $depart <br>
+                              Guests: $people <br>
+                              Thank you for staying with us! We look forward to your next visit :)";
+      
+            $mail->send();
+            return true;
+        } 
+        catch (Exception $e) {
+            return false;
+        }
+    }
+
+?>    

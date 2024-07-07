@@ -32,7 +32,6 @@ if(isset($_POST["register"])) {
                          alert('$result_fetch[email] Email already exits');
                          window.location.href = 'index.php';
                     </script>";
-
                }
           } 
           
